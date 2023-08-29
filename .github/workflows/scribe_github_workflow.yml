@@ -9,8 +9,6 @@ jobs:
   scribe-sign-verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
       
       - name: Scribe BOM Action
         uses: scribe-security/action-bom@master
