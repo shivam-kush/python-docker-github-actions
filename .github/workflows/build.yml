@@ -24,3 +24,21 @@ jobs:
         uses: scribe-security/action-installer@master
         with:
           tools: valint
+          
+      - name: Scribe BOM Action
+        uses: scribe-security/action-bom@master
+        with:
+          target: 'busybox:latest'
+          format: attest-generic
+          scribe-enable: true
+          scribe-client-id: ${{ secrets.clientid }}
+          scribe-client-secret: ${{ secrets.clientsecret }}
+          
+      - name: Scribe Verify Action
+        uses: scribe-security/action-verify@master
+        with:
+          target: 'busybox:latest'
+          format: attest-generic
+          scribe-enable: true
+          scribe-client-id: ${{ secrets.clientid }}
+          scribe-client-secret: ${{ secrets.clientsecret }}
