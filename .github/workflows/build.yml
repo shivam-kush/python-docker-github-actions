@@ -28,7 +28,7 @@ jobs:
       - name: Scribe BOM Action
         uses: scribe-security/action-bom@master
         with:
-          target: 'busybox:latest'
+          target: busybox:latest
           format: attest-generic
           scribe-enable: true
           scribe-client-id: ${{ secrets.clientid }}
@@ -37,7 +37,7 @@ jobs:
       - name: Scribe Verify Action
         uses: scribe-security/action-verify@master
         with:
-          target: 'busybox:latest'
+          target: busybox:latest
           format: attest-generic
           scribe-enable: true
           scribe-client-id: ${{ secrets.clientid }}
