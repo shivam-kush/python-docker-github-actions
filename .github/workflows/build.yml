@@ -18,3 +18,9 @@ jobs:
 
       - name: Display Docker image
         run: docker images
+
+      - name: valint install
+        id: valint_install
+        uses: scribe-security/action-installer@master
+        with:
+          tools: valint
