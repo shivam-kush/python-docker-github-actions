@@ -9,7 +9,6 @@ jobs:
   scribe-sign-verify:
     runs-on: ubuntu-latest
     steps:
-
         uses: scribe-security/action-bom@master
         with:
           target: [target]
@@ -17,7 +16,7 @@ jobs:
           scribe-enable: true
           scribe-client-id: ${{ secrets.clientid }}
           scribe-client-secret: ${{ secrets.clientsecret }}
-
+          
         uses: scribe-security/action-verify@master
         with:
           target: [target]
