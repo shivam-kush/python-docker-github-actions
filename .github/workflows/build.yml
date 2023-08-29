@@ -32,3 +32,13 @@ jobs:
           scribe-enable: true
           scribe-client-id: ${{ secrets.clientid }}
           scribe-client-secret: ${{ secrets.clientsecret }}
+
+      - name: valint verify
+        id: valint_verify
+        uses: scribe-security/action-installer@master
+        with:
+          target: 'busybox:latest'
+          scribe-enable: true
+          scribe-client-id: ${{ secrets.clientid }}
+          scribe-client-secret: ${{ secrets.clientsecret }}
+          
