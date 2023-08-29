@@ -1,6 +1,6 @@
 name: scribe_github_workflow
 
-on: 
+on:
   push:
     tags:
       - "*"
@@ -9,7 +9,7 @@ jobs:
   scribe-sign-verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git
+      - name: Checkout Repository
         uses: actions/checkout@v2
       
       - name: Scribe BOM Action
