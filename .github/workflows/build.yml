@@ -29,3 +29,6 @@ jobs:
         uses: scribe-security/action-bom@master
         with:
           target: 'busybox:latest'
+          scribe-enable: true
+          scribe-client-id: ${{ secrets.clientid }}
+          scribe-client-secret: ${{ secrets.clientsecret }}
