@@ -24,8 +24,3 @@ jobs:
         uses: scribe-security/action-installer@master
         with:
           tools: valint
-
-      - name: valint verify
-        uses: scribe-security/action-verify@master
-        with:
-          target: 'busybox:latest'
