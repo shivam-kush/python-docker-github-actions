@@ -2,8 +2,8 @@ name: scribe_github_workflow
 
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - main
 
 jobs:
   scribe-sign-verify:
