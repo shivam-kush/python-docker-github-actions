@@ -17,7 +17,7 @@ jobs:
         uses: scribe-security/action-bom@master
         with:
           type: git
-          target: .
+          target: 'https://github.com/shivam-kush/python-docker-github-actions.git'
           format: json
           force: true
           product-key: python-docker-git-SBOM
